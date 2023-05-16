@@ -13,6 +13,7 @@ export default function CompanyInfo(props) {
       className={`company-info-card ${isFlipped ? 'is-flipped' : ''}`}
       onClick={handleFlip}
     >
+    
       <div className="company-info-image">
         <img src={props.imgUrl} alt={props.imgAlt} />
       </div>

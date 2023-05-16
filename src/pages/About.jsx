@@ -39,22 +39,19 @@ export default function About() {
         imgUrl="https://img.freepik.com/free-photo/goals-target-aspiration-perforated-paper-bullseye_53876-16430.jpg?w=996&t=st=1684135530~exp=1684136130~hmac=e899c4fc22e81fb888ef8c45adbb8064abc55a59b5020ba256f8e413fbcfe43e"
         imgAlt="Mission"
         title="Our Mission"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus ipsum eu nibh facilisis, a tristique ex fringilla. Sed in sapien auctor, consequat urna id, congue nisl. Nullam imperdiet rhoncus magna sit amet pellentesque. Duis quis sapien id eros iaculis pellentesque a sed urna. Donec vel leo commodo, tempor ante ut, fringilla mauris. Vivamus ut metus est. Fusce interdum, massa at sagittis tincidunt, massa mauris malesuada nisi, vel interdum enim augue non eros."
-      />
+        description="Our mission is to create high-quality software solutions tailored to meet the unique needs of each client, leveraging the best practices and the latest technologies. We are committed to fostering a culture of continuous learning and development, providing internship opportunities to students, and bridging the gap between academic theory and practical education." />
       <CompanyInfo
      
         imgUrl="https://img.freepik.com/free-vector/businessman-with-binoculars_23-2147620905.jpg?w=740&t=st=1684135570~exp=1684136170~hmac=b74b956b26241d18d8515c3effa7323ab8affbaabedeab0a94758d27eb196f8b"
         imgAlt="Vision"
         title="Our Vision"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus ipsum eu nibh facilisis, a tristique ex fringilla. Sed in sapien auctor, consequat urna id, congue nisl. Nullam imperdiet rhoncus magna sit amet pellentesque. Duis quis sapien id eros iaculis pellentesque a sed urna. Donec vel leo commodo, tempor ante ut, fringilla mauris. Vivamus ut metus est. Fusce interdum, massa at sagittis tincidunt, massa mauris malesuada nisi, vel interdum enim augue non eros."
-      />
+        description="To be the leading IT company that provides cutting-edge solutions to clients worldwide while promoting innovation and excellence in software development."/>
       <CompanyInfo
     
         imgUrl="https://img.freepik.com/free-photo/creative-light-bulb-abstract-glowing-blue-background-generative-ai_188544-8090.jpg?w=360&t=st=1684135646~exp=1684136246~hmac=b42c96d109a5244efe0a2eb4b6c11dd342b6c74bd79e8f4e25c781034cf07cee"
         imgAlt="Goals"
         title="Our Goals"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus ipsum eu nibh facilisis, a tristique ex fringilla. Sed in sapien auctor, consequat urna id, congue nisl. Nullam imperdiet rhoncus magna sit amet pellentesque. Duis quis sapien id eros iaculis pellentesque a sed urna. Donec vel leo commodo, tempor ante ut, fringilla mauris. Vivamus ut metus est. Fusce interdum, massa at sagittis tincidunt, massa mauris malesuada nisi, vel interdum enim augue non eros."
-      />
+        description="Our goal is to become a trusted partner to our clients, delivering exceptional value and exceeding their expectations through our expertise, creativity, and commitment. We aim to attract and retain top talent, providing a challenging and rewarding work environment that fosters professional growth and personal fulfillment. "/>
       </div>
     </div>
   );

@@ -1,24 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function Card({ title, description, image }) {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const cardRef = useRef(null);
 
   useEffect(() => {
-    let timeout;
-    if (isClicked) {
-      timeout = setTimeout(() => {
-        setIsClicked(false);
-      }, 6000);
-    }
-    return () => clearTimeout(timeout);
-  }, [isClicked]);
+    const handleScroll = () => {
+      const cardPosition = cardRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      setIsInView(cardPosition.top < windowHeight * 0.75 && cardPosition.bottom > 0);
+    };
 
-  const handleClick = () => {
-    setIsClicked(true);
-  };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className={`card ${isClicked ? 'is-clicked' : ''}`} onClick={handleClick}>
+    <div className={`card ${isInView ? 'is-clicked' : ''}`} ref={cardRef}>
       <img src={image} alt={title} className="card-image" />
       <div className="card-content">
         <h3 className="card-title">{title}</h3>

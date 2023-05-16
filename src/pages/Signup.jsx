@@ -34,7 +34,7 @@ export default function Signup() {
         <div>
           <div className="navbar-register">Register</div>
           <div className="register-form">
-            <div>
+            <div className="input-tag-register-container" >
               <input
                 data-testid="email"
                 class="input-style-signup"

@@ -39,7 +39,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   };
   return (
     <div className="">
-      <nav className=" p-2 top-5 left-2 right-0 z-10 bg-black">
+      <nav className=" p-2 top-5 left-2 right-0 z-10  bg-gradient-to-r from-violet-700 via-slate-900 to-stone-900">
         <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 ">
           <div className="relative flex items-center justify-between h-16 ">
             <div className="flex-shrink-0">
@@ -80,7 +80,7 @@ const [isDropdownOpen, setIsDropdownOpen] = useState(false);
               )}
             </div>
 
-            <div>{width}</div>
+            
 
             <ToastContainer />
             <div className="hidden sm:block sm:ml-6">

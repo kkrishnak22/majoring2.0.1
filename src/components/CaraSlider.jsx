@@ -29,69 +29,6 @@ const CarSlider = () => {
       para: "Our website offers comprehensive game development courses covering Unity, C#, game design, and more.Explore the world of game development with our expert-led courses on game engines, programming, and design. Master the art of game creation and unleash your creativity with our diverse curriculum.",
     },
   ]);
-  const bannerTitle = {
-    position: "absolute",
-    top: "40%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    fontSize: "48px",
-    fontWeight: "bold",
-    color: "#fff",
-    zIndex: 2,
-  };
-  
-  const bannerPara = {
-    position: "absolute",
-    top: "calc(40% + 140px)", // set to 40px to space it out from the title
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    fontSize: "18px",
-    color: "#fff",
-    zIndex: 1,
-  };
- const centerThisBox = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  
-};
-  const slideStyles = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: `url(${slides[currentIndex]})`,
-    borderRadius: "10px",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    position: "relative",
-    filter: "brightness(37%)"
-  };
-  const sliderStyles = {
-    height: "100%",
-
-    position: "relative",
-  };
-
-  const left = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0,-50%)",
-    left: "32px",
-    fontSize: "45px",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-  };
-  const right = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0,-50%)",
-    right: "32px",
-    fontSize: "45px",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-  };
 
   function gotoPrev() {
     const isFS = currentIndex === 0;
@@ -103,22 +40,34 @@ const CarSlider = () => {
     const newIndex = isLS ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   }
- 
+
   return (
     <div className="sliderStyles">
       <div className="left" onClick={gotoPrev}>
         <FiArrowLeft />
       </div>
       <div className="centerThisBox">
-        <div className="bannerTitle"><h2>{imageArray[currentIndex].title}</h2></div>
+        <div className="bannerTitle">
+          <h2>{imageArray[currentIndex].title}</h2>
+        </div>
         <div className="bannerPara">{imageArray[currentIndex].para}</div>
+        <a
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSc8Y1VdYtmqI2-rc6JPIL8GMcTsaEKYeLZOoN16rSN6fRuiNw/viewform  "
+          className="get-started-button"
+        >
+          Get Started
+        </a>
       </div>
       <div className="right" onClick={gotoRight}>
         <FiArrowRight />
       </div>
-      <div className="slideStyles" style={{ backgroundImage: `url(${slides[currentIndex]})` }}></div>
+      <div
+        className="slideStyles"
+        style={{ backgroundImage: `url(${slides[currentIndex]})` }}
+      ></div>
     </div>
   );
-}
+};
 
 export default CarSlider;

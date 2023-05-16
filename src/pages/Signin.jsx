@@ -71,7 +71,7 @@ setLoading(true)
             />
             <p className="loginPara">
               &nbsp; New user/admin
-              <Link id="signinLink" to="/majoring2.0.1/signup">
+              <Link id="signinLink" to="/signup">
                 &nbsp; Signup
               </Link>
             </p>
