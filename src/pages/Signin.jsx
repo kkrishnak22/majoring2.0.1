@@ -18,7 +18,7 @@ setLoading(true)
       .then((userCredentials) => {
         setAuthUser(userCredentials.user);
         setLoading(false);
-        navigate("/");
+        navigate("/majoring2.0.1");
         console.log("userCredentials", userCredentials);
       })
       .catch((error) => {
@@ -71,7 +71,7 @@ setLoading(true)
             />
             <p className="loginPara">
               &nbsp; New user/admin
-              <Link id="signinLink" to="/signup">
+              <Link id="signinLink" to="/majoring2.0.1/signup">
                 &nbsp; Signup
               </Link>
             </p>
