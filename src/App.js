@@ -18,7 +18,7 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          
+          <Route  path="/majoring2.0.1" element={<HomePage />} />
           <Route path="/editor" element={<Landing />} />
 
           <Route path="/about" element={<About />} />
