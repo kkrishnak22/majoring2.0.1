@@ -2,15 +2,22 @@ import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserContext } from "../context/UserProvider";
 import { Link, useNavigate } from "react-router-dom";
+import {ToastContainer,toast} from 'react-toastify';
 
 export default function Navbar() {
   const navigate = useNavigate();
   const { authUser, setAuthUser } = useContext(UserContext);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   function handleSignOut(e) {
+    const notify = () => toast("Singning out!");
+    setLoading(true);
     e.preventDefault();
     setAuthUser(null);
-    navigate('/')
+    setLoading(false);
+    notify()
+    navigate("/");
   }
   function handleProfileClick() {
     setShowDropdown(true);
@@ -24,31 +31,32 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <p className="text-green-400 font-serif  text-5xl ">Majoring</p>
             </div>
+            <ToastContainer />
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Home
-                </a>
+                </Link>
                 {authUser && (
-                  <a
-                    href="/editor"
+                  <Link
+                    to="/editor"
                     className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                   >
                     Editor
-                  </a>
+                  </Link>
                 )}
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
-            { authUser ? (
+            {authUser ? (
               <div className="ml-4 flex items-center sm:ml-6 relative">
                 <a
                   className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
@@ -58,12 +66,18 @@ export default function Navbar() {
                 >
                   Profile
                 </a>
-                <div
-                  onClick={handleSignOut}
-                  className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                >
-                  Sign out
-                </div>
+                {loading ? (
+                  <div className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium">
+                    Signing out....
+                  </div>
+                ) : (
+                  <div
+                    onClick={handleSignOut}
+                    className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
+                  >
+                    Sign out
+                  </div>
+                )}
                 {showDropdown && (
                   <div className="absolute top-0 right-0 bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 ease-in-out">
                     <div className="px-4 py-2">
@@ -82,18 +96,18 @@ export default function Navbar() {
               </div>
             ) : (
               <div className="ml-4 flex items-center sm:ml-6">
-                <a
-                  href="/signin"
+                <Link
+                  to="/signin"
                   className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Sign In
-                </a>
-                <a
-                  href="/signup"
+                </Link>
+                <Link
+                  to="/signup"
                   className="text-gray-300 hover:bg-purple-500 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
                 >
                   Sign Up
-                </a>
+                </Link>
               </div>
             )}
           </div>

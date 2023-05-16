@@ -11,24 +11,22 @@ import Signin from "./pages/Signin";
 
 import { UserProvider } from "./context/UserProvider";
 function App() {
-
-
   return (
     <UserProvider>
       <div className="App">
-        <Navbar  />
+        <Navbar />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/majoring2.0.1" element={<HomePage />} />
           <Route path="/editor" element={<Landing />} />
-          <Route path="majoring2.0.1/editor" element={<Landing />} />
-          <Route path="/about" element={<About  />} />
-          <Route path="majoring2.0.1/about" element={<About  />} />
+
+          <Route path="/about" element={<About />} />
+
           <Route path="/signup" element={<Signup />} />
-          <Route path="majoring2.0.1/signup" element={<Signup />} />
+
           <Route path="/signin" element={<Signin />} />
-          <Route path="majoring2.0.1/signin" element={<Signin />} />
-         </Routes>
+        </Routes>
 
         <Footer />
       </div>
