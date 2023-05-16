@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { UserContext } from "../context/UserProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,7 +9,7 @@ export default function Navbar() {
   const { authUser, setAuthUser } = useContext(UserContext);
   const [showDropdown, setShowDropdown] = useState(false);
   const [loading, setLoading] = useState(false);
-const [showMenu, setShowMenu] = useState(false)
+
 const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
