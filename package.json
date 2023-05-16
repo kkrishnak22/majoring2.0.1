@@ -1,5 +1,5 @@
 {
-  "name": "majoring2.0.1"
+  "name": "majoring2.0.1",
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
