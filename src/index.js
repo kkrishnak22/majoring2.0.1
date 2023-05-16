@@ -6,7 +6,7 @@ import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/majoring2.0.1">
+    <BrowserRouter >
       <App />
     </BrowserRouter>
   </React.StrictMode>,
