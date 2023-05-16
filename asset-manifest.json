@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/majoring2.0.1/static/css/main.c988ca22.css",
-    "main.js": "/majoring2.0.1/static/js/main.84eef7bb.js",
+    "main.css": "/majoring2.0.1/static/css/main.cf377a7d.css",
+    "main.js": "/majoring2.0.1/static/js/main.71dfa826.js",
     "static/js/266.06ccb0b2.chunk.js": "/majoring2.0.1/static/js/266.06ccb0b2.chunk.js",
     "static/js/4450.c10c0eb9.chunk.js": "/majoring2.0.1/static/js/4450.c10c0eb9.chunk.js",
     "static/js/8849.fd1aabcf.chunk.js": "/majoring2.0.1/static/js/8849.fd1aabcf.chunk.js",
@@ -57,11 +57,11 @@
     "static/media/slider-2.jpg": "/majoring2.0.1/static/media/slider-2.5fd387860d2b4ccacf92.jpg",
     "static/media/slider-3.jpg": "/majoring2.0.1/static/media/slider-3.174a94ba33ec4e250ca9.jpg",
     "index.html": "/majoring2.0.1/index.html",
-    "main.c988ca22.css.map": "/majoring2.0.1/static/css/main.c988ca22.css.map",
-    "main.84eef7bb.js.map": "/majoring2.0.1/static/js/main.84eef7bb.js.map"
+    "main.cf377a7d.css.map": "/majoring2.0.1/static/css/main.cf377a7d.css.map",
+    "main.71dfa826.js.map": "/majoring2.0.1/static/js/main.71dfa826.js.map"
   },
   "entrypoints": [
-    "static/css/main.c988ca22.css",
-    "static/js/main.84eef7bb.js"
+    "static/css/main.cf377a7d.css",
+    "static/js/main.71dfa826.js"
   ]
 }
