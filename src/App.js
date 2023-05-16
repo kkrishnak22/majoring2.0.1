@@ -19,7 +19,7 @@ function App() {
         <Navbar  />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage />} />
           <Route path="/majoring2.0.1" element={<HomePage />} />
           <Route path="/editor" element={<Landing />} />
           <Route path="/about" element={<About  />} />
