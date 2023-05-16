@@ -19,14 +19,17 @@ function App() {
         <Navbar  />
 
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route path="/majoring2.0.1" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/editor" element={<Landing />} />
+          <Route path="majoring2.0.1/editor" element={<Landing />} />
           <Route path="/about" element={<About  />} />
+          <Route path="majoring2.0.1/about" element={<About  />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="majoring2.0.1/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-         
-        </Routes>
+          <Route path="majoring2.0.1/signin" element={<Signin />} />
+         </Routes>
+
         <Footer />
       </div>
     </UserProvider>
